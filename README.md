@@ -34,7 +34,7 @@ Requirements
 Steps
 
 1. Clone repository
-git clone https://github.com/tuusuario/appointments-api-springboot.git
+git clone https://github.com/nicorojass/appointments-api-springboot.git
 
 2. Configure database in application.properties
 
