@@ -1,4 +1,4 @@
-Appointment Management API
+# Appointment Management API
 
 REST API built with Java and Spring Boot for managing users and appointments.
 
