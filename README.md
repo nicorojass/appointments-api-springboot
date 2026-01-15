@@ -1,19 +1,24 @@
-# Appointment Management API
+# Appointment Management API 🗓️
 
-REST API built with Java and Spring Boot for managing users and appointments.
+###### REST API built with Java and Spring Boot for managing users and appointments.
 
-Features
+### Features ⚙️
 
-User Management
+#### User Management
 
 - Create user (POST /api/users)
 - Get user by ID (GET /api/users/{id})
 - Get all users (GET /api/users)
 
-Appointment Management
-In progress
+#### Appointment Management
 
-Tech Stack
+- Create appointment (POST /api/appointments)
+- Get appointment by ID (GET /api/appointments/{id})
+- Get all appointments (GET /api/appointments)
+- Cancel appointment (PUT /api/appointments/{id}/cancel)
+
+### Tech Stack 🧰
+
 - Java 21
 - Spring Boot
 - Spring Data JPA
@@ -21,59 +26,109 @@ Tech Stack
 - Maven
 - Postman
 
-Architecture
+### Architecture
+
 - Controller → Service → Repository → Database
+- Entities relationship:
+User (1) ──── (*) Appointment
 
-Setup
+### Setup
 
-Requirements
+#### Requirements
+
 - Java 17 or higher
 - MySQL
 - Maven
 
-Steps
+#### Steps
 
-1. Clone repository
+- Clone repository
+```bash
 git clone https://github.com/nicorojass/appointments-api-springboot.git
+```
 
-2. Configure database in application.properties
-
-spring.datasource.url=jdbc:mysql://localhost:3306/db_name
+- Configure database in application.properties
+```properties
+spring.datasource.url=jdbc:mysql://localhost:3306/db_appointments_managment_app
 spring.datasource.username=your_user
 spring.datasource.password=your_password
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+```
 
-3. Run project
+
+- Run project
+```bash
 mvn spring-boot:run
+```
 
-API Example
+#### API Examples
 
-- Create user
+#### User
+- Create User
 POST /api/users
 
+```json
 {
-"name": "Nico",
-"lastName": "Prueba",
-"dni": 12345678,
-"email": "nico@test.com
-",
-"phoneNumber": "2230000000"
+  "name": "Nico",
+  "lastName": "Test",
+  "dni": 12345678,
+  "email": "nico@test.com",
+  "phoneNumber": "2230000000"
 }
+```
 
-- Get user by id
+- Get User by ID
 GET /api/users/1
 
-- Get all users
+- Get All Users
 GET /api/users
 
-Project Status
+#### Appointment
+- Create Appointment
+POST /api/appointments
 
-User management module completed.
-Appointment management module under development.
+```json
+{
+  "date": "2026-02-26",
+  "time": "14:00",
+  "status": "ACTIVE",
+  "user": {
+    "id": 1
+  }
+}
+```
 
-Author
+- Get Appointment by ID
+GET /api/appointments/1
 
-Nicolás Rojas
-Backend Developer (Java & Spring Boot)
+- Get All Appointments
+GET /api/appointments
 
-- LinkedIn: https://linkedin.com/in/nicolaserojas
-- GitHub: https://github.com/nicorojass
+- Cancel Appointment
+PUT /api/appointments/1/cancel
+
+### Project Status ✅
+#### Core backend completed.
+
+#### Implemented:
+
+- User management module
+- Appointment management module
+- Entity relationships
+- RESTful endpoints
+- MySQL persistence
+
+#### Planned improvements:
+
+- Global exception handling
+- Pagination
+- Validation rules (overlapping appointments)
+- Automated tests
+
+### Author 👨‍💻
+
+#### Nicolás Rojas | Backend Developer – Java & Spring Boot
+
+##### LinkedIn: https://linkedin.com/in/nicorojass
+##### GitHub: https://github.com/nicorojass
