@@ -130,5 +130,5 @@ PUT /api/appointments/1/cancel
 
 #### Nicolás Rojas | Backend Developer – Java & Spring Boot
 
-##### LinkedIn: https://linkedin.com/in/nicorojass
+##### LinkedIn: https://linkedin.com/in/nicolaserojas
 ##### GitHub: https://github.com/nicorojass
