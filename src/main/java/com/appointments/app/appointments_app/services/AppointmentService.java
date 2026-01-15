@@ -1,5 +1,7 @@
 package com.appointments.app.appointments_app.services;
 
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 
 import com.appointments.app.appointments_app.models.Appointment;
@@ -32,6 +34,10 @@ public class AppointmentService {
         appointment.setStatus(Status.CANCELED);
         appointmentRepo.save(appointment);
 
+    }
+
+    public List<Appointment> getAllAppointments(){
+        return (List<Appointment>) appointmentRepo.findAll();
     }
 
 }
