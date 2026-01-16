@@ -97,7 +97,6 @@ POST /api/appointments
 {
   "date": "2026-02-26",
   "time": "14:00",
-  "status": "ACTIVE",
   "user": {
     "id": 1
   }
