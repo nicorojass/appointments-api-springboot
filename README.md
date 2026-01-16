@@ -9,7 +9,7 @@
 - Create user (POST /api/users)
 - Get user by ID (GET /api/users/{id})
 - Get all users (GET /api/users)
-- Delete user by ID (DELETE /api/users/{id}/delete)
+- Delete user (DELETE /api/users/{id}/delete)
 
 #### Appointment Management
 
@@ -17,7 +17,7 @@
 - Get appointment by ID (GET /api/appointments/{id})
 - Get all appointments (GET /api/appointments)
 - Cancel appointment (PUT /api/appointments/{id}/cancel)
-- Delete appointment by ID (DELETE /api/appointments/{id}/delete)
+- Delete appointment (DELETE /api/appointments/{id}/delete)
 
 ### Tech Stack 🧰
 
@@ -86,6 +86,9 @@ GET /api/users/1
 - Get All Users
 GET /api/users
 
+- Delete User
+DELETE /api/users/1/delete
+
 #### Appointment
 - Create Appointment
 POST /api/appointments
@@ -109,6 +112,9 @@ GET /api/appointments
 
 - Cancel Appointment
 PUT /api/appointments/1/cancel
+
+- Delete Appointment
+DELETE /api/appointments/1/delete
 
 ### Project Status ✅
 #### Core backend completed.
