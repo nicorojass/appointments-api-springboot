@@ -118,13 +118,8 @@ PUT /api/appointments/1/cancel
 - Entity relationships
 - RESTful endpoints
 - MySQL persistence
-
-#### Planned improvements:
-
-- Global exception handling
-- Pagination
 - Validation rules (overlapping appointments)
-- Automated tests
+- Global exception handling
 
 ### Author 👨‍💻
 
