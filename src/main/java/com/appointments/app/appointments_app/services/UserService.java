@@ -16,15 +16,25 @@ public class UserService {
     }
 
     public User createUser(User newUser){
+        
+        if (userRepo.existsByDni(newUser.getDni())){
+            throw new IllegalArgumentException("Ya existe un usuario con ese DNI");
+        }
+
         return userRepo.save(newUser);
     }
 
     public User searchUser(Long id){
-        return userRepo.findById(id).orElseThrow(() -> new IllegalArgumentException("No existe un turno con ese ID"));
+        return userRepo.findById(id).orElseThrow(() -> new IllegalArgumentException("No existe un usuario con ese ID"));
     }
 
     public List<User> getAllUsers() {
         return (List<User>) userRepo.findAll();
-}
+    }
     
+    public void deleteUser(Long id){
+        User user = searchUser(id);
+        userRepo.delete(user);
+    }
+
 }

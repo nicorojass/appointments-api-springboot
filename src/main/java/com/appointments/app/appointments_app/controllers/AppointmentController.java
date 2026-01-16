@@ -2,6 +2,7 @@ package com.appointments.app.appointments_app.controllers;
 
 import java.util.List;
 
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -40,6 +41,11 @@ public class AppointmentController {
     @PutMapping("/{id}/cancel")
     public void cancelAppointment(@PathVariable Long id){
         appointmentService.cancelAppointment(id);
+    }
+
+    @DeleteMapping("/{id}/delete")
+    public void deleteAppointment(@PathVariable Long id){
+        appointmentService.deleteAppointment(id);
     }
 
     

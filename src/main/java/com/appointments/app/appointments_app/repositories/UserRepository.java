@@ -6,4 +6,5 @@ import com.appointments.app.appointments_app.models.User;
 
 public interface UserRepository extends CrudRepository<User, Long>{
 
+    boolean existsByDni(Long dni);
 }
