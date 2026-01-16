@@ -9,6 +9,7 @@
 - Create user (POST /api/users)
 - Get user by ID (GET /api/users/{id})
 - Get all users (GET /api/users)
+- Delete user by ID (DELETE /api/users/{id}/delete)
 
 #### Appointment Management
 
@@ -16,6 +17,7 @@
 - Get appointment by ID (GET /api/appointments/{id})
 - Get all appointments (GET /api/appointments)
 - Cancel appointment (PUT /api/appointments/{id}/cancel)
+- Delete appointment by ID (DELETE /api/appointments/{id}/delete)
 
 ### Tech Stack 🧰
 
